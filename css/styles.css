@@ -10,3 +10,14 @@ body {
     border-radius: 10px;
     padding: 10px;
 }
+
+.main-page img {
+    width: 100%;
+    margin: auto;
+}
+
+.lyrics-page img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
