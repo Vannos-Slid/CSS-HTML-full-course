@@ -3,12 +3,21 @@ html {
 }
 
 body {
-    width: 50vw;
+    width: 90vw;
     margin: auto;
     margin-top: 100px;
     background-color: aliceblue;
     border-radius: 10px;
     padding: 10px;
+    display: block;
+}
+
+.main-page table {
+    margin: 0 auto;
+}
+
+.main-page h3 {
+    text-align: center;
 }
 
 .main-page img {
