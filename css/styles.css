@@ -6,7 +6,7 @@ body {
     width: 90vw;
     margin: auto;
     margin-top: 100px;
-    /* background-color: aliceblue; */
+    background-color: aliceblue;
     border-radius: 10px;
     padding: 10px;
     display: block;
@@ -14,8 +14,8 @@ body {
 
 .main-page {
     margin: auto;
-    width: 50%;
-    background-color: aliceblue;
+    /* width: 50%; */
+    /* background-color: aliceblue; */
 }
 
 .main-page table {
