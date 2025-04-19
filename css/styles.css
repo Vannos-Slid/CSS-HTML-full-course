@@ -14,7 +14,7 @@ html {
 
 body {
     width: 90vw;
-    margin: auto;
+    margin: 0px;
     margin-top: 100px;
     background-color: aliceblue;
     border-radius: 10px;
@@ -29,13 +29,6 @@ h1 {
     text-shadow: 3px 3px 5px hsl(0, 70%, 45%), -3px -3px 5px hsl(182, 55%, 57%);
 }
 
-#box1 {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    box-shadow: 3px 3px 5px;
-}
-
 p {
     font-family: 'Silkscreen-Bold', "courier new";
     border-bottom: 3px solid rgb(194, 22, 22);
@@ -44,6 +37,26 @@ p {
     border-right: 3px dotted rgb(79, 250, 79);
 
     border-radius: 10px;
+}
+
+.box {
+    border: 5px solid;
+    font-size: 5em;
+    width: 250px;
+    height: 250px;
+    /* right, left, top, bottom */
+    /* margin: 50px; */
+    margin: auto;
+}
+
+#box1 {
+    background-color: hsl(0, 74%, 54%);
+    /* margin-left: auto; */
+}
+
+#box2 {
+    background-color: hsl(187, 88%, 61%);
+
 }
 
 .main-page {
