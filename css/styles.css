@@ -1,3 +1,13 @@
+@font-face {
+    src: url(/fonts/SpecialGothicExpandedOne-Regular.ttf);
+    font-family: SpecialGothicExpandedOne-Regular;
+}
+
+@font-face {
+    src: url(/fonts/Silkscreen-Bold.ttf);
+    font-family: 'Silkscreen-Bold';
+}
+
 html {
     background-color: #FBEAEB;
 }
@@ -14,11 +24,15 @@ body {
 }
 
 h1 {
-    color: white;
+    font-family: SpecialGothicExpandedOne-Regular, arial;
 }
 
-#p1 {
-    color: tomato;
+p {
+    /* font-family: Silkscreen, "courier new"; */
+    font-family: 'Silkscreen-Bold', "courier new";
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
 }
 
 #p2 {
