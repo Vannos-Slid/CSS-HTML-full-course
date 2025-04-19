@@ -16,22 +16,24 @@ body {
     width: 90vw;
     margin: auto;
     margin-top: 100px;
-    /* background-color: aliceblue; */
-    background-color: rgb(97, 97, 97);
+    background-color: aliceblue;
     border-radius: 10px;
     padding: 10px;
     display: block;
 }
 
 h1 {
-    /* border-style: solid;
-    border-width: 3px;
-    border-color: hsl(281, 81%, 50%); */
+    /* horizontal vertical offsets */
+    /* blur */
+    /* color */
+    text-shadow: 3px 3px 5px hsl(0, 70%, 45%), -3px -3px 5px hsl(182, 55%, 57%);
+}
 
-    /* shorter variant */
-    border: 3px solid hsl(281, 81%, 50%);
-
-    border-radius: 100px;
+#box1 {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 3px 3px 5px;
 }
 
 p {
