@@ -75,24 +75,26 @@ p {
     text-align: center;
 }
 
-#img1 {
-    float: left;
-    margin-right: 25px;
+#div1 {
+    background-color: hsl(0, 89%, 45%);
+    width: 100px;
+    height: 100px;
+    /* display: block; */
+    /* display: inline; */
+
+    display: inline-block;
+    /* display: none; */
+    /* visibility: hidden; */
 }
 
-#img2 {
-    float: right;
-}
-
-.overflow-container {
-    border: 2px solid;
-    height: 60px;
-    /* overflow: visible; */
-    /* overflow: hidden; */
-    /* overflow: clip;
-    overflow-clip-margin: 13px; */
-    /* overflow: scroll; */
-    overflow: auto;
+#span1 {
+    background-color: hsl(240, 100%, 68%);
+    width: 100px;
+    height: 100px;
+    /* display: block; */
+    /* display: inline; */
+    display: inline-block;
+    /* display: none; */
 }
 
 .lyrics-page img {
