@@ -84,6 +84,17 @@ p {
     float: right;
 }
 
+.overflow-container {
+    border: 2px solid;
+    height: 60px;
+    /* overflow: visible; */
+    /* overflow: hidden; */
+    /* overflow: clip;
+    overflow-clip-margin: 13px; */
+    /* overflow: scroll; */
+    overflow: auto;
+}
+
 .lyrics-page img {
     margin-left: auto;
     margin-right: auto;
