@@ -116,6 +116,26 @@ p {
     text-align: center;
 }
 
+.parent {
+    padding: 30px;
+    width: 500px;
+    background-color: #0b0c11;
+    color: white;
+
+    position: relative;
+}
+
+.child {
+    padding: 20px;
+    background-color: #0071ff;
+    color: white;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+}
+
 #div1 {
     background-color: hsl(0, 89%, 45%);
     width: 100px;
