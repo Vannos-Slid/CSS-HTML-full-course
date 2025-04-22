@@ -14,12 +14,14 @@ html {
 
 body {
     width: 90vw;
-    margin: 0px;
+    margin: auto;
     margin-top: 100px;
     background-color: aliceblue;
     border-radius: 10px;
     padding: 10px;
     display: block;
+    border: 3px solid;
+    display: flow-root;
 }
 
 h1 {
@@ -73,9 +75,13 @@ p {
     text-align: center;
 }
 
-.main-page img {
-    width: 100%;
-    margin: auto;
+#img1 {
+    float: left;
+    margin-right: 25px;
+}
+
+#img2 {
+    float: right;
 }
 
 .lyrics-page img {
