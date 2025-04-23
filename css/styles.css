@@ -39,6 +39,8 @@ h1 {
     /* blur */
     /* color */
     text-shadow: 3px 3px 5px hsl(0, 70%, 45%), -3px -3px 5px hsl(182, 55%, 57%);
+
+    color: white;
 }
 
 p {
@@ -49,14 +51,36 @@ p {
     border-right: 3px dotted rgb(79, 250, 79);
 
     border-radius: 10px;
+
+    color: white;
 }
 
 .container {
-    background-color: hsl(0, 0%, 24%);
-    height: 100vh;
+    border: 2px solid;
+    border-color: white;
 }
 
-.box {
+/* .container p {
+    color: black;
+    background-color: hsl(60, 100%, 50%);
+} */
+
+/* .container>p {
+    color: black;
+    background-color: hsl(60, 100%, 50%);
+} */
+
+/* .container~p {
+    color: black;
+    background-color: hsl(60, 100%, 50%);
+} */
+
+.container+p {
+    color: black;
+    background-color: hsl(60, 100%, 50%);
+}
+
+.container .box {
     background-color: hsl(0, 0%, 100%);
 
     border: 2px solid;

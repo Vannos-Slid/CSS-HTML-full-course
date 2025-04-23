@@ -11,10 +11,35 @@
 
 <body>
     <div class="main-page">
-        <h1>Hello</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere pariatur possimus iure ex ratione, labore
-            corrupti mollitia illo itaque, eum excepturi perspiciatis, quam voluptatum ut. Dolores consequuntur ex
-            mollitia. Odit!</p>
+        <!--
+            combinators = explains the relationship
+                        between listed selectors
+                          = descendant
+                        > = child
+                        ~ = general sibling
+                        + = adjacent sibling
+
+                        samples:
+                        selector > selector
+                        div > p
+        -->
+
+        <div class="container">
+            <p>This is #1</p>
+            <p>This is #2</p>
+            <div>
+                <p>This is #3</p>
+            </div>
+        </div>
+
+        <p>This is #4</p>
+        <p>This is #5</p>
+
+        <!-- <div>
+            <p>This is #4</p>
+            <p>This is #5</p>
+        </div> -->
+
     </div>
 
     <script>
