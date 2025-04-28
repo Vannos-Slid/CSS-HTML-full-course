@@ -22,7 +22,7 @@ body {
     margin-top: 100px;
     background-color: aliceblue;
     border-radius: 10px;
-    padding: 10px;
+    padding: 0;
     display: block;
     border: 3px solid;
     display: flow-root;
@@ -41,6 +41,8 @@ h1 {
     text-shadow: 3px 3px 5px hsl(0, 70%, 45%), -3px -3px 5px hsl(182, 55%, 57%);
 
     color: white;
+
+    text-align: center;
 }
 
 p {
@@ -91,6 +93,10 @@ p::selection {
     font-size: 1.2em;
 }
 
+a:link {
+    color: hsl(212, 100%, 68%);
+}
+
 /* a:hover {
     color: hsl(212, 100%, 86%);
     font-size: 1.1em;
@@ -101,13 +107,17 @@ p::selection {
     font-size: 1.1em;
 } */
 
+/* a:visited {
+    color: hsl(120, 9%, 50%);
+} */
+
 li:hover {
     background-color: hsl(60, 84%, 66%);
 }
 
-li:not(:hover) {
+/* li:not(:hover) {
     background-color: hsl(60, 3%, 77%);
-}
+} */
 
 .pagination {
     text-align: center;
@@ -186,9 +196,9 @@ li:not(:hover) {
 
     + = where first match should start
  */
-li:nth-child(3n + 2) {
+/* li:nth-child(3n + 2) {
     background-color: hsl(60, 100%, 84%);
-}
+} */
 
 .greeting p {
     background-color: hsl(197, 100%, 67%);
@@ -278,7 +288,7 @@ li:nth-child(3n + 2) {
 }
 
 .main-page {
-    margin: auto;
+    margin: 0;
     /* width: 50%; */
     /* background-color: aliceblue; */
 }
@@ -337,4 +347,36 @@ li:nth-child(3n + 2) {
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding-left: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+.navbar li {
+    /* float: left; */
+    display: inline;
+}
+
+main {
+    margin: 0 20px;
 }
