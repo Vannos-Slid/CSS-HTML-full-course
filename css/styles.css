@@ -95,15 +95,15 @@ a:link {
     color: hsl(212, 100%, 68%);
 }
 
-a:hover {
+/* a:hover {
     color: hsl(212, 100%, 86%);
     font-size: 1.1em;
-}
+} */
 
-a:active {
+/* a:active {
     color: hsl(212, 100%, 28%);
     font-size: 1.1em;
-}
+} */
 
 a:visited {
     color: hsl(120, 9%, 50%);
@@ -115,6 +115,29 @@ li:hover {
 
 li:not(:hover) {
     background-color: hsl(60, 3%, 77%);
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+
+.pagination a.active {
+    background-color: hsl(120, 77%, 48%);
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+.pagination a:hover:not(.active) {
+    background-color: hsl(180, 0%, 52%);
+    border-radius: 5px;
 }
 
 /* 
