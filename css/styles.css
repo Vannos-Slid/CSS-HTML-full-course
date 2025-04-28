@@ -55,6 +55,42 @@ p {
     color: white;
 }
 
+h1::first-letter {
+    font-size: 2em;
+    font-style: italic;
+}
+
+p::first-line {
+    background-color: hsl(337, 100%, 67%);
+}
+
+p::selection {
+    color: hsl(110, 42%, 39%);
+    background-color: hsl(0, 1%, 29%);
+}
+
+.fruits li::before {
+    /* content: "✅"; */
+}
+
+#apple::after {
+    content: "🍎";
+}
+
+#orange::after {
+    content: "🍊";
+}
+
+#banana::after {
+    content: "🍌";
+}
+
+.fruits li::marker {
+    content: "✓";
+    color: rgb(26, 228, 26);
+    font-size: 1.2em;
+}
+
 a:link {
     color: hsl(212, 100%, 68%);
 }
