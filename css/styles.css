@@ -18,19 +18,12 @@ html {
 
 body {
     /* width: 90vw; */
-    margin: 100px 0;
+    margin: 0;
     background-color: aliceblue;
-    border-radius: 10px;
-    padding: 0;
-    display: block;
+    /* border-radius: 10px; */
+    /* padding: 0; */
+    /* display: block; */
     /* border: 3px solid; */
-    display: flow-root;
-
-    /* background-image: url(/img/backgrounds/femen.png); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 h1 {
@@ -292,30 +285,67 @@ li:hover {
     border-radius: 15px;
 }
 
+.box {
+    width: 250px;
+    height: 250px;
+    border: 5px solid;
+    font-size: 13em;
+    text-align: center;
+
+    transform: translateX(100px) rotateZ(45deg) scale(0.5);
+}
+
 #box1 {
-    /* font-size: 3em; */
-    background-color: hsl(0, 98%, 42%);
-    /* align-self: end; */
-    /* order: 1; */
+
+    background-color: hsl(120, 100%, 72%);
+
+
+    /* Translate */
+    /* transform: translateX(100%); */
+    /* transform: translateY(100%); */
+    /* transform: translate(50px, 50px); */
+
+    /* rotate */
+    /* transform: rotateX(180deg); */
+    /* transform: rotateY(180deg); */
+    /* transform: rotate(90deg); */
+    /* transform: rotateZ(25deg); */
+
+    /* scale */
+    /* transform: scaleX(0.25); */
+    /* transform: scaleY(0.25); */
+    /* transform: scale(3, 1); */
+
+    /* skew */
+    /* transform: skewX(45deg); */
+    /* transform: skewY(45deg); */
+    /* transform: skew(35deg, 35deg); */
+
+    /* transform: translateX(100%) rotateZ(90deg) scale(0.5); */
 }
 
 #box2 {
-    background-color: hsl(60, 100%, 70%);
+    background-color: hsl(0, 78%, 56%);
     /* align-self: center; */
-    order: -1;
+    /* order: -1; */
 }
 
 #box3 {
-    background-color: hsl(118, 72%, 53%);
+    background-color: hsl(184, 87%, 55%);
 }
 
 #box4 {
     background-color: hsl(189, 100%, 71%);
 }
 
+img {
+    width: 50vw;
+    transform: translateX(50%) rotateZ(180deg) scaleX(2);
+}
+
 .main-page {
     /* display: flex; */
-    justify-content: center;
+    /* justify-content: center; */
     /* width: 50%; */
     /* background-color: aliceblue; */
 }
