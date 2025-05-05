@@ -19,7 +19,7 @@ html {
 body {
     /* width: 90vw; */
     margin: 0;
-    background-color: aliceblue;
+    background-color: rgb(36, 36, 36);
     /* border-radius: 10px; */
     /* padding: 0; */
     /* display: block; */
@@ -285,15 +285,144 @@ li:hover {
     border-radius: 15px;
 }
 
+
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(300%);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        transform: translateX(300%);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(300%);
+    }
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(300%);
+    }
+}
+
+@keyframes rotate {
+    50% {
+        /* transform: rotateX(360deg); */
+        /* transform: rotateY(360deg); */
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(2, 2);
+    }
+}
+
+@keyframes shrink {
+    50% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes fade {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: hsl(0, 100%, 50%);
+    }
+
+    20% {
+        background-color: hsl(34, 100%, 58%);
+    }
+
+    40% {
+        background-color: hsl(56, 100%, 50%);
+    }
+
+    60% {
+        background-color: hsl(101, 100%, 73%);
+    }
+
+    80% {
+        background-color: hsl(170, 100%, 60%);
+    }
+
+    100% {
+        background-color: hsl(229, 100%, 62%);
+    }
+}
+
+@keyframes glow {
+    50% {
+        box-shadow: 0px 0px 50px hsl(60, 100%, 59%);
+    }
+}
+
 .box {
     width: 250px;
     height: 250px;
     border: 5px solid;
     font-size: 13em;
     text-align: center;
+    background-color: hsl(0, 100%, 50%);
+    animation-name: slideLeft;
+    animation-duration: 2s;
+    /* opacity: 0; */
 
-    transform: translateX(100px) rotateZ(45deg) scale(0.5);
+    /* 
+        (times)
+        infinite
+     */
+    animation-iteration-count: 1;
+
+    /*  
+        normal
+        reverse
+        alternate
+        alternate-reverse
+    */
+    animation-direction: normal;
+
+    /* 
+        paused 
+        running
+    */
+    animation-play-state: paused;
+
+    /*
+        ease-in-out
+        linear 
+        steps(numSteps)
+     */
+    animation-timing-function: cubic-bezier(0.2, -0.55, 0.79, 1.94);
 }
+
+/* .box:active {
+    animation-name: glow;
+    animation-duration: 2s;
+} */
+
+/* .box:hover {
+    animation-name: glow;
+    animation-duration: 2s;
+} */
 
 #box1 {
 
@@ -340,7 +469,12 @@ li:hover {
 
 img {
     width: 50vw;
-    transform: translateX(50%) rotateZ(180deg) scaleX(2);
+    animation-name: slideLeft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0.2, -0.55, 0.79, 1.94);
 }
 
 .main-page {
