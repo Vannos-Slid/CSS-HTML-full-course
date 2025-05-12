@@ -3,12 +3,20 @@ body {
     display: flex;
     border: 2px solid black;
 
+    gap: 20px;
+
+    /* 
+        wrap
+        nowrap
+    */
+    flex-wrap: wrap;
+
     /* 
         row
         row-reverse
         column
     */
-    flex-direction: column;
+    /* flex-direction: column; */
 
     /* 
         flex-start 
@@ -20,7 +28,7 @@ body {
         space-evenly
     */
     /* main axe */
-    justify-content: flex-start;
+    justify-content: center;
 
     align-items: center;
 }
