@@ -4,6 +4,13 @@ body {
     border: 2px solid black;
 
     /* 
+        row
+        row-reverse
+        column
+    */
+    flex-direction: column;
+
+    /* 
         flex-start 
         flex-end
         center
@@ -13,14 +20,8 @@ body {
         space-evenly
     */
     /* main axe */
-    justify-content: space-evenly;
+    justify-content: flex-start;
 
-    /* 
-        flex-start 
-        flex-end
-        center
-    */
-    /* cross axe */
     align-items: center;
 }
 
