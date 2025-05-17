@@ -39,7 +39,7 @@ h1 {
         N fr
         N px
     */
-    grid-auto-rows: 200px;
+    grid-auto-rows: 1fr;
     gap: 1em;
     justify-content: center;
     grid-template-areas:
