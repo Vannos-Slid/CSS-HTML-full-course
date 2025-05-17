@@ -6,7 +6,7 @@ body {
     /* column-gap: 10px;
     row-gap: 20px; */
 
-    gap: 20px;
+    gap: 10px;
 
     /* 
         wrap
@@ -31,9 +31,9 @@ body {
         space-evenly
     */
     /* main axe */
-    justify-content: flex-end;
 
     align-items: flex-start;
+    justify-content: flex-end;
 
     /* same as others before */
     /* justify all elemnts in intire matrix */
@@ -80,7 +80,9 @@ body {
 #box-1 {
     /* flex-shrink: 0; */
     /* flex-grow: 5; */
-    justify-self: flex-start;
+
+
+    margin-right: auto;
 }
 
 @media (max-width: 625px) {
