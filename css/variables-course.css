@@ -1,3 +1,10 @@
+:root {
+    --clr-dark: #020617;
+    --clr-light: #f1f5f9;
+    --clr-slate: #94a3b8;
+    --clr-primary: #e11d48;
+}
+
 *,
 *::before,
 *::after {
@@ -11,17 +18,17 @@
 }
 
 body {
-    background-color: #020617;
+    background-color: var(--clr-dark);
 }
 
 .title {
-    color: #f1f5f9;
+    color: var(--clr-light);
 }
 
 .description {
-    color: #94a3b8;
+    color: var(--clr-slate);
 }
 
 .link {
-    color: #e11d48;
+    color: var(--clr-primary);
 }
