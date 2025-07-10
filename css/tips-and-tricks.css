@@ -12,10 +12,15 @@ body {
 .container {
     padding: min(5em, 8%);
     margin: auto;
-    width: 400px;
+    width: 80vw;
     background-color: white;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     border-radius: 1em;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
 }
 
 @media (max-width: 700px) {
