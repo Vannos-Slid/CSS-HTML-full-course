@@ -70,6 +70,8 @@ nav a:hover {
     align-items: flex-start;
     justify-content: flex-start;
 
+    transition: opacity 200ms ease-in-out;
+
 }
 
 .show {
