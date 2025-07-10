@@ -1,13 +1,25 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+/* body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     gap: 30px;
+} */
+
+.element {
+    height: 100vh;
+    height: 100dvh;
+    padding: 2em;
+    background: #df5757;
+    color: white;
+    border: 15px solid blue;
 }
 
 .container {
