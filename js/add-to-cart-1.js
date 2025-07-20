@@ -1,11 +1,14 @@
 const productContainer = document.querySelector('.product-list');
 const isProductDetailPage = document.querySelector('.product-detail');
+const isCartPage = document.querySelector('.cart');
 
 if (productContainer) {
     displayProducts();
 }
 else if (isProductDetailPage) {
     displayProductDetail();
+} else if (isCartPage) {
+    displayCart();
 }
 
 function displayProducts() {
@@ -29,7 +32,6 @@ function displayProducts() {
     });
 }
 
-
 function displayProductDetail() {
     const productData = JSON.parse(sessionStorage.getItem("selectedProduct"));
 
@@ -40,7 +42,7 @@ function displayProductDetail() {
     const thumbnailContainer = document.querySelector('.thimnail-list');
     const colorContainer = document.querySelector('.color-options');
     const sizeContainer = document.querySelector('.size-options');
-    const addToCartBtn = document.querySelector('#add-card-btn');
+    const addToCartBtn = document.querySelector('#add-to-cart-btn');
 
     let selectedColor = productData.colors[0];
     let selectedSize = selectedColor.sizes[0];
@@ -101,11 +103,11 @@ function displayProductDetail() {
     updateProductDisplay(selectedColor);
 
     addToCartBtn.addEventListener("click", () => {
-        addToCartBtn(productData, selectedColor, selectedSize);
+        addToCart(productData, selectedColor, selectedSize);
     });
 }
 
-function addToCartBtn(product, color, size) {
+function addToCart(product, color, size) {
     let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
     const existingItem = cart.find(item => item.id === product.id && item.color === color.name && item.size === size);
@@ -117,7 +119,7 @@ function addToCartBtn(product, color, size) {
             id: product.id,
             title: product.title,
             price: product.price,
-            image: product.mainImage,
+            image: color.mainImage,
             color: color.name,
             size: size,
             quantity: 1
@@ -125,4 +127,102 @@ function addToCartBtn(product, color, size) {
     }
 
     sessionStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartBadge();
 }
+
+function displayCart() {
+    const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+
+    const cartItemContainer = document.querySelector(".cart-items");
+    const subtotalEl = document.querySelector(".subtotal");
+    const grandTotalEl = document.querySelector(".grand-total");
+
+    cartItemContainer.innerHTML = "";
+
+    if (cart.length === 0) {
+        cartItemContainer.innerHTML = `<p>Your cart is empty</p>`;
+        subtotalEl.textContent = "$0";
+        grandTotalEl.textContent = "$0"
+        return
+    }
+
+    let subtotal = 0;
+
+    cart.forEach((item, index) => {
+        const itemTotal = parseFloat(item.price.replace("$", "")) * item.quantity;
+        subtotal += itemTotal;
+
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+        cartItem.innerHTML = `
+                    <div class="product">
+                        <img src="${item.image}" alt="">
+                        <div class="item-detail">
+                            <p>${item.title}</p>
+                            <div class="size-color-box">
+                                <span class="size">${item.size}</span>
+                                <span class="color">${item.color}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="price">${item.price}</span>
+                    <div class="quantity"><input type="number" value="${item.quantity}" min="1" data-index=${index}></div>
+                    <span class="total-price">${itemTotal}</span>
+                    <button class="remove" data-index=${index}><i class="ri-close-line"></i></button>
+                </div>
+        `;
+        cartItemContainer.appendChild(cartItem);
+    });
+
+    subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    grandTotalEl.textContent = `$${subtotal.toFixed(2)}`;
+
+    removeCartItem();
+    updateCartQuantity();
+}
+
+function removeCartItem() {
+    document.querySelectorAll(".remove").forEach(button => {
+        button.addEventListener("click", () => {
+            let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+            const index = button.getAttribute("data-index");
+            cart.splice(index, 1);
+            sessionStorage.setItem("cart", JSON.stringify(cart));
+            displayCart();
+            updateCartBadge();
+        });
+    });
+}
+
+function updateCartQuantity() {
+    document.querySelectorAll(".quantity input").forEach(input => {
+        input.addEventListener("change", () => {
+            let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+            const index = input.getAttribute("data-index");
+            cart[index].quantity = parseInt(input.value);
+            sessionStorage.setItem("cart", JSON.stringify(cart));
+            displayCart();
+            updateCartBadge();
+        });
+    });
+}
+
+function updateCartBadge() {
+    const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+    const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+    const badge = document.querySelector(".cart-item-count");
+
+
+    if (badge) {
+        if (cartCount > 0) {
+            badge.textContent = cartCount;
+            badge.style.display = "block";
+        } else {
+            badge.style.display = "none";
+        }
+    }
+}
+
+updateCartBadge();
