@@ -96,6 +96,29 @@ nav a.accent-link {
     transition: background 300ms ease;
 }
 
+.skip-link {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.skip-link:focus {
+    opacity: 1;
+    pointer-events: auto;
+    outline: 3px solid white;
+}
+
 @media screen and (max-width: 700px) {
     nav {
         position: fixed;
