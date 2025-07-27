@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="./js/navbar2.js" defer></script>
     <script src="https://kit.fontawesome.com/b4ca65fb9b.js" crossorigin="anonymous"></script>
 
 
@@ -20,7 +21,37 @@
 
 <body>
 
-    <header class="header">
+    <!-- Navbar 2.0 course -->
+
+    <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <img src="./img/navbar/menu-white.svg" alt="">
+    </button>
+
+    <nav id="navbar">
+        <ul>
+            <li><button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar"><img
+                        src="./img/navbar/close-white.svg" alt=""></button></li>
+            <li class="home-li"><a class="active-link" aria-current="page" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a a class="accent-link" href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Accessible Navbar</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quidem, blanditiis ad nesciunt est id maiores
+            laboriosam quas commodi eum quasi inventore amet sapiente magni voluptatum consequatur eos, deserunt
+            debitis!</p>
+
+    </main>
+
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+    <!-- Navbar 1.0 course -->
+    <!-- <header class="header">
         <nav>
             <ul class="sidebar">
                 <li onclick="hideSidebar()"><a href="#!"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
@@ -48,11 +79,11 @@
 
             </ul>
         </nav>
-    </header>
+    </header> -->
 
     <!-- js link -->
 
-    <script type="text/javascript" src="./js/navbar.js"></script>
+    <!-- <script type="text/javascript" src="./js/navbar.js"></script> -->
 </body>
 
 </html>
