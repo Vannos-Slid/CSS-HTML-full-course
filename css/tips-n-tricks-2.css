@@ -1,3 +1,4 @@
+/* Tip 1 */
 .element {
     width: 250px;
     height: 150px;
@@ -28,7 +29,9 @@ body {
         -10px -10px 10px white inset;
 }
 
-#mycheckbox {
+/* Tip 2 */
+
+/* #mycheckbox {
     display: none;
 }
 
@@ -42,6 +45,7 @@ label {
     font-weight: 500;
     font-size: 1.1rem;
     color: #f9f9f9;
+    cursor: pointer;
 }
 
 .container {
@@ -57,6 +61,7 @@ label {
 .container ul li {
     min-width: 200px;
     padding-left: 1em;
+    cursor: pointer;
 }
 
 .container ul li:hover {
@@ -65,4 +70,18 @@ label {
 
 #mycheckbox:checked~.container {
     display: flex;
+} */
+
+/* Tip 3 */
+.container {
+    padding: 1em 2em;
+    margin: 20px auto;
+    background-color: rgb(0, 103, 238);
+    color: #f9f9f9;
+    border-radius: 10px;
+    /* ver. 1 */
+    /* width: min(800px, 90%); */
+
+    /* ver. 2 */
+    width: clamp(400px, 50vw, 800px);
 }
