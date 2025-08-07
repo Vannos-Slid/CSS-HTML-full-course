@@ -144,6 +144,17 @@ body {
     background-color: rgb(0, 129, 235);
 }
 
-.container .buttons-container button:not(:first-child) {
+/* :not() tip */
+/* .container .buttons-container button:not(:first-child) {
     background-color: red;
+} */
+
+/* :has() tip */
+.container .buttons-container button:has(i) {
+    min-width: auto;
+    padding-right: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    fill: white;
 }
