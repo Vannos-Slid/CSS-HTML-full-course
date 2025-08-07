@@ -194,7 +194,7 @@ body:has(option[value="dark"]:checked) {
 
 /* Tip 7 */
 
-.container h1 {
+/* .container h1 {
     font-size: 5rem;
 
     background: linear-gradient(to right, red, blue);
@@ -250,4 +250,33 @@ body:has(option[value="dark"]:checked) {
 
 .container button:focus .dropdown {
     display: block;
+} */
+
+/* Tip 8 */
+
+:root {
+    counter-reset: headings;
+}
+
+.container .item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .item h1 {
+    counter-increment: headings;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .item h1::before {
+    content: counter(headings);
+    background-color: #0071ff;
+    border-radius: 2px;
+    padding: .15em;
+    width: 40px;
+    text-align: center;
+    color: #f9f9f9;
 }
