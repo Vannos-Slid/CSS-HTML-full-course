@@ -1,0 +1,28 @@
+.element {
+    width: 250px;
+    height: 150px;
+    margin: 100px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    transition: box-shadow .3s ease;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.element:hover {
+    /* ver 1.0 */
+    /* box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+        -10px -10px 10px white; */
+
+    /* ver 2.0 inset */
+
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1) inset,
+        -10px -10px 10px white inset;
+}
