@@ -158,3 +158,36 @@ body {
     gap: 10px;
     fill: white;
 }
+
+/* Tip 6 */
+:root {
+    --background: #f9f9f9;
+    --text-color: black;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+.container {
+    width: min(460px, 90%);
+    color: var(--text-color);
+}
+
+.container p {
+    text-align: center;
+}
+
+.container select {
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+body:has(option[value="dark"]:checked) {
+    --background: black;
+    --text-color: #f9f9f9;
+}
