@@ -1,0 +1,21 @@
+/* Tip 1 */
+
+body {
+    padding: 0 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 50px auto;
+    padding: 1em 2em;
+    position: relative;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    /*                                                   enable: top right bottom left */
+    border-image: linear-gradient(to right, #0066ff, #ff32d6) 1 1 1 1;
+}
