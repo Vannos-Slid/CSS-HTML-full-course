@@ -36,3 +36,17 @@ button {
     /* Makes the images resize automatically */
     width: 100%;
 }
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+/* Not suppoeted on Opera GX */
+.input-container * {
+    accent-color: red;
+    caret-color: red;
+    padding: 1em;
+}
