@@ -1,7 +1,7 @@
 /* Tip 1 */
 
 body {
-    padding: 0 2em;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,4 +18,21 @@ button {
     border: 3px solid white;
     /*                                                   enable: top right bottom left */
     border-image: linear-gradient(to right, #0066ff, #ff32d6) 1 1 1 1;
+}
+
+/* Tip 2 */
+
+.layout-container {
+    /* Resposive Width */
+    width: min(1000px, 100%);
+    margin: 0 auto;
+    columns: 3 300px;
+    column-gap: 1em;
+}
+
+.layout-container img {
+    display: block;
+    margin-bottom: 1em;
+    /* Makes the images resize automatically */
+    width: 100%;
 }
