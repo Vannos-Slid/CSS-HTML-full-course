@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conic Gradient</title>
   <style>
-    body{
+    body {
       min-height: 100vh;
       display: grid;
       place-content: center;
     }
-    @property --angle{
+
+    @property --angle {
       syntax: "<angle>";
       initial-value: 0deg;
       inherits: false;
     }
-    .element{
+
+    .element {
       height: 400px;
       width: 400px;
       padding: 1em;
-      background-image: conic-gradient(from var(--angle), red, blue, red);  
+      background-image: conic-gradient(from var(--angle), red, blue, red);
       animation: 1s spin linear infinite;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    @keyframes spin{
-      from{
+
+    @keyframes spin {
+      from {
         --angle: 0deg;
       }
-      to{
+
+      to {
         --angle: 360deg;
       }
     }
-    .child{
+
+    .child {
       height: 100%;
       width: 100%;
       background-color: #1e1a2b;
@@ -43,6 +49,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="element">
     <div class="child">
@@ -51,4 +58,5 @@
     </div>
   </div>
 </body>
+
 </html>

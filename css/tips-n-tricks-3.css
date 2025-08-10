@@ -189,7 +189,7 @@ button {
     grid-template-rows: 1.5em 1fr;
 }
 
-p {
+.container p {
     margin-top: 2.5em;
 }
 
@@ -199,7 +199,7 @@ p {
 
 /* Tip 8 */
 
-img {
+img.clip-path-img {
     clip-path: polygon(50% 0%, 0 100%, 100% 100%);
 }
 
@@ -214,4 +214,87 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked {
     appearance: auto;
+}
+
+/* Tip 9 */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #0f1016;
+    color: white;
+}
+
+.product {
+    padding: 2em;
+    width: 350px;
+    background-color: #272935;
+    border-radius: .3em;
+    display: grid;
+    gap: 1em;
+    text-align: center;
+    position: relative;
+}
+
+.product img {
+    display: block;
+    margin: 0 auto;
+    border-radius: .3em;
+}
+
+.product h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.product::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffdd0035;
+    border: 1px solid #ffdd00;
+    color: #ffdd00;
+    padding: .5em 2em;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+/* Tip 10 */
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.element {
+    display: flex;
+    align-items: stretch;
+    padding: 1em;
+    width: 400px;
+    height: 400px;
+    background-image: conic-gradient(from var(--angle), red, blue, red);
+
+    animation: 1s spin linear infinite
+}
+
+.child-el {
+    display: block;
+    padding: 2em;
+    background-color: #0f1016;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg
+    }
 }
