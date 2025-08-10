@@ -196,3 +196,22 @@ p {
 .hidden {
     overflow: hidden;
 }
+
+/* Tip 8 */
+
+img {
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    clip-path: circle(50%);
+    accent-color: #9443d7;
+    appearance: none;
+    background: #cacaca;
+}
+
+input[type="checkbox"]:checked {
+    appearance: auto;
+}
