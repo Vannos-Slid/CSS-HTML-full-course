@@ -76,5 +76,35 @@ body {
     /* inset: 10px 30px 0px 100px; */
     inset: 0;
     margin: auto;
+}
 
+/* Tip 5 */
+body {
+    background-color: white;
+}
+
+.container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.container .text-container {
+    padding: 2em;
+    border-radius: 1em;
+    background-color: #282a32;
+    color: #a3abbf;
+
+    height: 100px;
+    overflow-y: auto;
+}
+
+.container .text-container h2 {
+    font-size: .6rem;
+    color: white;
+}
+
+.container .text-container p {
+    font-size: .4rem;
 }
