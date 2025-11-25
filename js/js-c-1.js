@@ -1,3 +1,11 @@
+const conLogTypeOf = (message) => {
+    console.log(typeof (message));
+}
+
+const conLog = (message) => {
+    console.log(message);
+}
+
 // #1
 // for (let i = 1; i <= 5; ++i) {
 //     console.log("Count", i);
@@ -28,14 +36,32 @@
 // console.log(username);
 
 // #4
-const username = "Tom";
+// const username = "Tom";
 // username = "Harry"; // error
 
 // #5
-let a;
-let color;
-let _private;
-let $button;
-let getTop10;
-let a_large_name;
-let camelCase;
+// let a;
+// let color;
+// let _private;
+// let $button;
+// let getTop10;
+// let a_large_name;
+// let camelCase;
+
+// #6
+let name = ""; // String 
+let name1 = ``; // String
+let number = 5.5 // Number
+let isLoggedIn = false; // Boolean
+
+conLogTypeOf(name);
+conLogTypeOf(name1);
+conLogTypeOf(number);
+conLogTypeOf(isLoggedIn)
+
+conLog(7 + 4);
+conLog(7 + "4");
+conLog("7" + "4");
+
+conLog(number > 5)
+conLog(number < 5)
