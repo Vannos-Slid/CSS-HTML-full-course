@@ -49,19 +49,33 @@ const conLog = (message) => {
 // let camelCase;
 
 // #6
-let name = ""; // String 
-let name1 = ``; // String
-let number = 5.5 // Number
-let isLoggedIn = false; // Boolean
+// let name = ""; // String
+// let name1 = ``; // String
+// let number = 5.5 // Number
+// let isLoggedIn = false; // Boolean
 
-conLogTypeOf(name);
-conLogTypeOf(name1);
-conLogTypeOf(number);
-conLogTypeOf(isLoggedIn)
+// conLogTypeOf(name);
+// conLogTypeOf(name1);
+// conLogTypeOf(number);
+// conLogTypeOf(isLoggedIn)
 
-conLog(7 + 4);
-conLog(7 + "4");
-conLog("7" + "4");
+// conLog(7 + 4);
+// conLog(7 + "4");
+// conLog("7" + "4");
 
-conLog(number > 5)
-conLog(number < 5)
+// conLog(number > 5)
+// conLog(number < 5)
+
+// #7 Operators
+let a = 10;
+let b = 5;
+
+conLog(a + b);
+conLog(a - b);
+conLog(a * b);
+conLog(a / b);
+
+conLog(a % b);
+conLog(a % 2);
+conLog(a ** 2);
+conLog(4 ** 3);
